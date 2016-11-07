@@ -43,8 +43,8 @@ def getAuthToken(client_id, client_secret):
 # call jtv API 
 def getFeeds(token):
     
-    conn = httplib.HTTPConnection("metax.stage.junctiontv.net")
-    url =  "/metax/1.1/feed/json/all"
+    conn = httplib.HTTPConnection("www.examplejtvapi.com")
+    url =  "/xyz/abc/def"
 
     headersMap = {
         "Authorization": "Bearer " + token
