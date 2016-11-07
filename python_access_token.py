@@ -1,3 +1,19 @@
+"""
+To get the authentication token for Junction TV API calls
+
+This code had two function:
+- ``getAuthToken(client_id, client_secret)``: to get the authentication call from `http://cloud.junctiontv.net/ums/2.0/oauth/`
+- ``getFeeds(token)``: to get the Feeds according to vairous Junction TV API   
+
+For detailed description read: http://api.junctiontv.com/jtv/jtapi/getting-access-tokens-2
+Refer Github: https://github.com/JunctionTV/Getting-Access-Tokens 
+
+"""
+# Author: Gourab Chowdhury <gourab@junctiotntv.com>
+#
+# License: The MIT License (MIT)
+# Copyright (c) <2016> <Junction TV Inc.>
+
 import  httplib, urllib, base64, json, sys
 
 # get the oauth 2.0 token
@@ -20,12 +36,12 @@ def getAuthToken(client_id, client_secret):
         return result["access_token"]
     
     else:
-        print '[API_CALL_ERROR]' + "{error: " + str(response.status) + ",reason: "+ response.reason+" }"
+        raise Exception('[API_CALL_ERROR]' + "{status code: " + str(response.status) + ",reason: "+ response.reason+" }")
     
 
 
 # call jtv API 
-def getJson(token):
+def getFeeds(token):
     
     conn = httplib.HTTPConnection("metax.stage.junctiontv.net")
     url =  "/metax/1.1/feed/json/all"
@@ -44,7 +60,7 @@ def getJson(token):
         result = json.loads( data )
         return result
     else:
-        print '[API_CALL_ERROR]' + "{error: " + str(response.status) + ",reason: "+ response.reason+" }"
+        raise Exception('[API_CALL_ERROR]' + "{status code: " + str(response.status) + ",reason: "+ response.reason+" }")
     
 def main():
     
@@ -54,11 +70,11 @@ def main():
     token=getAuthToken(client_id, client_secret)
     print "Authentication Token: ",token
     try:
-        results = getJson(token)
+        results = getFeeds(token)
     except e:
         # handle an auth error by re-fetching a auth token again
         token = getAuthToken(creds)
-        results = getJson(token)
+        results = getFeeds(token)
 
     # print the results
     print results
