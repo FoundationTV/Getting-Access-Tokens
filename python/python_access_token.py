@@ -73,7 +73,7 @@ def main():
         results = getFeeds(token)
     except e:
         # handle an auth error by re-fetching a auth token again
-        token = getAuthToken(creds)
+        token = getAuthToken(client_id, client_secret)
         results = getFeeds(token)
 
     # print the results
