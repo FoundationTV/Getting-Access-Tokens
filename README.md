@@ -48,4 +48,4 @@ App will only be making periodic calls to the JTV APIs. If the API call (i.e. HT
 The processing sequence will look like this:
 
 ![GitHub Logo](/images/AuthFinal.png)
-Format: ![Alt Text](url)
+
