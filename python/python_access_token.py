@@ -18,7 +18,7 @@ import  httplib, urllib, base64, json, sys
 
 # get the oauth 2.0 token
 def getAuthToken(client_id, client_secret):
-    conn = httplib.HTTPConnection("cloud.junctiontv.net")
+    conn = httplib.HTTPSConnection("cloud.junctiontv.net")
     url =  "/ums/2.0/oauth/"
     
     authString = base64.encodestring('%s:%s' % (client_id, client_secret)).replace('\n', '')
