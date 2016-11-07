@@ -1,4 +1,4 @@
-# Getting_Access_Tokens
+# Getting Access Tokens
 To get access authentication tokens and implement the Junction TV API in your apps.
 
 ## Getting a token
