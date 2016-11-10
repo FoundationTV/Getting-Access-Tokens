@@ -6,6 +6,6 @@ Change the code according to your need.
 ## Steps to run the script
 
 ```bash 
-$ chmod +x shell_script_access_token.sh.sh
+$ chmod +x shell_script_access_token.sh
 $ ./shell_script_access_token.sh 
 ```
