@@ -49,3 +49,9 @@ The processing sequence will look like this:
 
 ![GitHub Logo](/images/AuthFinal.png)
 
+### License
+MIT Licensed. See accompanying LICENSE file.
+
+### Copyright
+Copyright (C) **2016**  Junction TV Inc.
+

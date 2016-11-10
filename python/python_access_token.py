@@ -18,7 +18,7 @@ import  httplib, urllib, base64, json, sys
 
 # get the oauth 2.0 token
 def getAuthToken(client_id, client_secret):
-    conn = httplib.HTTPConnection("cloud.junctiontv.net")
+    conn = httplib.HTTPSConnection("cloud.junctiontv.net")
     url =  "/ums/2.0/oauth/"
     
     authString = base64.encodestring('%s:%s' % (client_id, client_secret)).replace('\n', '')
@@ -43,8 +43,8 @@ def getAuthToken(client_id, client_secret):
 # call jtv API 
 def getFeeds(token):
     
-    conn = httplib.HTTPConnection("metax.stage.junctiontv.net")
-    url =  "/metax/1.1/feed/json/all"
+    conn = httplib.HTTPConnection("www.examplejtvapi.com")
+    url =  "/xyz/abc/def"
 
     headersMap = {
         "Authorization": "Bearer " + token
@@ -73,7 +73,7 @@ def main():
         results = getFeeds(token)
     except e:
         # handle an auth error by re-fetching a auth token again
-        token = getAuthToken(creds)
+        token = getAuthToken(client_id, client_secret)
         results = getFeeds(token)
 
     # print the results

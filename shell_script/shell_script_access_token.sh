@@ -1,3 +1,15 @@
+#To get the authentication token for Junction TV API calls
+
+#For detailed description read: http://api.junctiontv.com/jtv/jtapi/getting-access-tokens-2
+#Refer Github: https://github.com/JunctionTV/Getting-Access-Tokens 
+
+#-----------------------------------------------------------------------------------------
+# Author: Gourab Chowdhury <gourab@junctiotntv.com>
+#
+# License: The MIT License (MIT)
+# Copyright (c) <2016> <Junction TV Inc.>
+#------------------------------------------------------------------------------------------
+
 txtrst=$(tput sgr0) # Text reset
 txtyel=$(tput setaf 7) # Yellow
 txtgrn=$(tput setaf 6) # Green
