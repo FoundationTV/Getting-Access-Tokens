@@ -2,7 +2,7 @@
 To get access authentication tokens and implement the Junction TV API in your apps.
 
 ## Getting a token
-Authentication tokens is obtained from the JunctionTV OAuth API. Along with access tokens, it is required to obtain client credentials (a client id and a client password) they are specific to the API and operations that are required to be accessed or performed.
+Authentication tokens are obtained from the JunctionTV OAuth API. Along with access tokens, it is required to obtain client credentials (a client id and a client password) they are specific to the API and operations that are required to be accessed or performed.
 
 Once credentials are obtained, access authentication token by making a POST request to:
 
