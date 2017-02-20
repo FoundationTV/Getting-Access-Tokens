@@ -3,7 +3,7 @@ Junction TV APIs.
 
 ##### Change the code according to your needs.
 
-### How to run the pyton code
+### How to run the python code
 **Step 1** Change the `client_id` and `client_secret`, with your client username and password.
 
 **Step 2** Change the `conn` and `url` in the `getFeeds()` according to your desired Junction TV API.
